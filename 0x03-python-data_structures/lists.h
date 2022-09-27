@@ -1,33 +1,57 @@
-#include "lists.h"
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stdlib.h>
+
+#define fi if
+#define __local __attribute__((weak))
+
+typedef unsigned int uint;
 
 /**
- * is_palindrome - check if a list is a palindrom
- * @head: list
- * Return: yes ? 1 : 0
+ * enum rets - yes no values
+ * @yes: 1
+ * @no: 0
  */
-int is_palindrome(listint_t **head)
+enum rets
 {
-	listint_t *temp = *head;
-	uint size, i;
-	int data[10240];
+	no,
+	yes
+};
 
-	/* No List */
-	fi(!head) return (no);
-	/* Empty list */
-	fi(!*head) return (yes);
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for project
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-	size = len(temp);
+/**
+ * len - find size of a list
+ * @ls: list
+ * Return: len
+ */
+__local uint len(listint_t *ls)
+{
+	uint i;
 
-	fi(size == yes) return (yes);
+	for (i = 0; ls; i++)
+		ls = ls->next;
 
-	temp = *head;
-	for (i = 0; temp; i++, temp = temp->next)
-		data[i] = temp->n;
-
-	for (i = 0; i <= size / 2; i++)
-		fi(data[i] != data[size - i - 1]) return (no);
-
-	return (yes);
+	return (i);
 }
-Footer
 
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+
+int is_palindrome(listint_t **head);
+
+#endif /* LISTS_H */
