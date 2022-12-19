@@ -1,9 +1,6 @@
 #!/usr/bin/node
 
-if (process.argv.length <= 2) {
-  console.log('No argument');
-} else if (process.argv.length <= 3) {
-  console.log('Argument found');
-} else {
-  console.log('Arguments found');
-}
+#!/usr/bin/node
+
+const myVar = 'C is fun\nPython is cool\nJavaScript is amazing';
+console.log(myVar);
