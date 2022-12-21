@@ -1,10 +1,8 @@
 #!/usr/bin/node
-
-/** 
- * represents a rectangle class with height and width.
+/**
+ * Represents a rectangle class with width and height attributes
  */
-
-module.exports = class Rectangle {
+class Rectangle {
   constructor (w, h) {
     this.width = w;
     this.height = h;
