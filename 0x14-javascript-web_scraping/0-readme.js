@@ -1,3 +1,12 @@
-const header = document.querySelector('header');
+#!/usr/bin/node
 
-header.style.color = '#FF0000';
+const fs = require('fs');
+const filename = process.argv[2];
+
+fs.readFile(filename, 'utf-8', (error, content) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(content);
+  }
+});
