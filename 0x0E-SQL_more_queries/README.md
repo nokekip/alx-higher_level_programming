@@ -1,6 +1,6 @@
-## SQL - More Queries
+# SQL - More Queries
 
-#   Objectives
+##   Objectives
 
 
  -   How to create a new MySQL user
