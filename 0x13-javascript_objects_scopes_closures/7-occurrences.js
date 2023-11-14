@@ -4,7 +4,7 @@
  * Returns number of occurence in a list
  */
 
-exports.nbOccurrences = function (list, searchElement) {
+exports.nbOccurences = function (list, searchElement) {
   let count = 0;
   for (const item in list) {
     if (list[item] === searchElement) {
