@@ -13,7 +13,7 @@ class Rectangle {
    * method that prints rectangle using Character 'X
    */
   print () {
-    for (let i = 0; 1 < this.height; i++) {
+    for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
     }
   }
