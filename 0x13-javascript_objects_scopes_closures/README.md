@@ -1,4 +1,0 @@
-# JavaScript 
-- Objects
-- Scopes
-- Closures
