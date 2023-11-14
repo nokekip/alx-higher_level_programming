@@ -1,5 +1,6 @@
 #!/bin/bash/node
 // Empty class Rectangle that defines rectangle
 
-class Rectangle {}
+class Rectangle {
+}
 module.exports = Rectangle;
