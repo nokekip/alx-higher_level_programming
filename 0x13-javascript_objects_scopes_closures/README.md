@@ -1,2 +1,4 @@
 # JavaScript
-- Object
+- Objects
+- Scopes
+- Closures
