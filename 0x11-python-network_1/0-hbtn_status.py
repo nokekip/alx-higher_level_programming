@@ -15,3 +15,4 @@ if __name__ == "__main__":
     print("\t- type:", type(status))
     print("\t- content:", status)
     print("\t- utf8 content:", status.decode('utf-8'))
+    
